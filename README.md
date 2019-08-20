@@ -2,7 +2,7 @@
 
 SSL Expiry Reminder - Get SSL Expiry Notification remainder on Telegram and Gotify  
 
-![System Info](https://raw.githubusercontent.com/mskian/ssl-expiry-reminder/master/screenshot.png)  
+![System Info](https://raw.githubusercontent.com/mskian/ssl-expiry-reminder/master/Screenshot.png)  
 
 ## Requirements
 
