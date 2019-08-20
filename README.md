@@ -2,14 +2,14 @@
 
 SSL Expiry Reminder - Get SSL Expiry Notification remainder on Telegram and Gotify  
 
-![System Info](https://raw.githubusercontent.com/mskian/ssl-expiry-reminder/master/Screenshot.png)  
+![SSL Expiry Reminder](https://raw.githubusercontent.com/mskian/ssl-expiry-reminder/master/Screenshot.png)  
 
 ## Requirements
 
 - Node 8X LTS or 10X LTS
 - `yarn` for Manage the Packages - Installation - <https://yarnpkg.com/en/docs/install>
 - bash for Run the Automated Tasks
-- Telegram Bot - <https://core.telegram.org/bots> and in `CHATID` add your Private Channel ID
+- Telegram Bot - <https://core.telegram.org/bots>
 - Gotify API - <https://gist.github.com/the-mcnaveen/2788985648490e7b3af24647247ed4e7#gistcomment-2996497>
 
 ## Installation
