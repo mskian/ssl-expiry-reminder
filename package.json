@@ -1,0 +1,34 @@
+{
+	"name": "ssl-expiry-reminder",
+	"version": "1.0.0",
+	"description": "SSL Expiry Reminder - Get Notification remainder on Telegram and Gotify",
+	"main": "check.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mskian/ssl-expiry-reminder.git"
+	},
+	"keywords": [
+		"linux",
+		"VPS",
+		"ssl",
+		"ssl checker",
+		"ssl expiry checker"
+	],
+	"author": "Santhosh Veer",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/mskian/ssl-expiry-reminder/issues"
+	},
+	"homepage": "https://github.com/mskian/ssl-expiry-reminder/#readme",
+	"dependencies": {
+		"axios": "^0.19.0",
+		"dotenv": "^8.0.0",
+		"moment": "^2.24.0",
+		"node-emoji": "^1.10.0",
+		"ssl-checker": "^1.2.1",
+		"telegram-bot-api": "^1.3.3"
+	}
+}
