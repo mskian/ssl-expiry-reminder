@@ -40,8 +40,33 @@ URL=https://push.example.com/message?token=XXXXXXXXXXXXXXX
 node check.js
 ```
 
-- Open `sslcheck.sh` file and add your domains you want to check
+## Usage
+
+- Just Run the Bash file `sslcheck.sh`
+
+```bash
+chmod +x sslcheck.sh
+```
+
+```bash
+./sslcheck.sh
+```
+
+- Replace mine Sites domain with your's <https://github.com/mskian/ssl-expiry-reminder/blob/ff1af0ceaa5ffe44654b96868a68a10792691f4b/sslcheck.sh#L9>
 - Create Cron job for Automate checking
+
+## Customization
+
+- Change SSL Days Remaining Days - <https://github.com/mskian/ssl-expiry-reminder/blob/ff1af0ceaa5ffe44654b96868a68a10792691f4b/check.js#L88>
+
+```js
+ if (certdata.days_remaining == '2') {
+                sendMessage('Status: Oops time to Renew SSL for \t' + lval + '\t' + emoji.get("rotating_light"));
+                //gotifyMessage('Status: Oops time to Renew SSL \t' + lval + '\t' + emoji.get("rotating_light"));
+            }
+```
+
+- For Gotify Push Notification uncomment `//gotifyMessage` in the Script File
 
 ## Library
 
