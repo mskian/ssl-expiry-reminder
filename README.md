@@ -37,7 +37,7 @@ URL=https://push.example.com/message?token=XXXXXXXXXXXXXXX
 - Testing - Execute the Script
 
 ```js
-node check.js
+node check.js example.com
 ```
 
 ## Usage
