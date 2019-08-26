@@ -29,8 +29,8 @@ touch .env
 ```
 
 ```bash
-BOTAPIKEY=<TELEGRAM BOT API KEY>
 CHATID=<TELEGRAM CHANNEL ID OR CHAT ID>
+TELEGRAM=https://api.telegram.org/bot<YOUR BOT API KEY>/sendMessage
 URL=https://push.example.com/message?token=XXXXXXXXXXXXXXX
 ```
 
@@ -62,11 +62,9 @@ chmod +x sslcheck.sh
 ```js
  if (certdata.days_remaining == '2') {
                 sendMessage('Status: Oops time to Renew SSL for \t' + lval + '\t' + emoji.get("rotating_light"));
-                //gotifyMessage('Status: Oops time to Renew SSL \t' + lval + '\t' + emoji.get("rotating_light"));
+                gotifyMessage('Status: Oops time to Renew SSL \t' + lval + '\t' + emoji.get("rotating_light"));
             }
 ```
-
-- For Gotify Push Notification uncomment `//gotifyMessage` in the Script File
 
 ## Library
 
@@ -77,6 +75,13 @@ SSL Checker NPM Module - <https://www.npmjs.com/package/ssl-checker>
 v0.0.1
 
 - First Release
+
+v0.0.2
+
+- Revamp
+- using Axios for Telegram instead of `telegram-bot-api` Module
+- Proper Input and Output Validation
+- Correct the version Number in `package.json`
 
 ## License
 
