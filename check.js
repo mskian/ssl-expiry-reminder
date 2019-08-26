@@ -10,10 +10,10 @@ require('dotenv').config();
 ///////////////////////////
 
 function sendMessage(message) {
-    if (process.env.CHATID && process.env.TELEGRAM) {
-        var url = process.env.TELEGRAM
+    if (process.env.TELEGRAM_CHATID && process.env.TELEGRAM_URL) {
+        var url = process.env.TELEGRAM_URL
         var bodyFormData = {
-            chat_id: process.env.CHATID,
+            chat_id: process.env.TELEGRAM_CHATID,
             parse_mode: 'html',
             text: message,
         }
@@ -45,8 +45,8 @@ function sendMessage(message) {
 ////////////////////////////////////////
 
 function gotifyMessage(hello) {
-    if (process.env.URL) {
-        var url = process.env.URL
+    if (process.env.GOTIFY_URL) {
+        var url = process.env.GOTIFY_URL
         var bodyFormData = {
             title: 'Uptime Status',
             message: hello,

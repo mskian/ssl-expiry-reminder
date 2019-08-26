@@ -29,9 +29,9 @@ touch .env
 ```
 
 ```bash
-CHATID=<TELEGRAM CHANNEL ID OR CHAT ID>
-TELEGRAM=https://api.telegram.org/bot<YOUR BOT API KEY>/sendMessage
-URL=https://push.example.com/message?token=XXXXXXXXXXXXXXX
+TELEGRAM_CHATID=<TELEGRAM CHANNEL ID OR CHAT ID>
+TELEGRAM_URL=https://api.telegram.org/bot<YOUR BOT API KEY>/sendMessage
+GOTIFY_URL=https://push.example.com/message?token=XXXXXXXXXXXXXXX
 ```
 
 - Testing - Execute the Script
