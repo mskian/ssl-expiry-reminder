@@ -30,7 +30,7 @@ function sendMessage(message) {
             })
             .catch(function(error) {
                 if (!error.response) {
-                    console.log('Twitter API URL is Missing');
+                    console.log('Telegram API URL is Missing');
                 } else {
                     console.log(error.response.data);
                 }
