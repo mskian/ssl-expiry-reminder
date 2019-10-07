@@ -83,6 +83,11 @@ v0.0.2
 - Proper Input and Output Validation
 - Correct the version Number in `package.json`
 
+v0.0.3
+
+- Update dependencies
+- Migrate SSL Checker Module to Latest JSON response
+
 ## License
 
 MIT
