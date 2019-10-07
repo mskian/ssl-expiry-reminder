@@ -3,6 +3,7 @@ test.js
 backup.js
 .env
 node_modules
+test
 
 # Optional npm cache directory
 .npm
