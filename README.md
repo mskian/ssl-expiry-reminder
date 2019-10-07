@@ -1,5 +1,7 @@
 # SSL Expiry Reminder
 
+[![dependencies Status](https://david-dm.org/mskian/ssl-expiry-reminder/status.svg)](https://david-dm.org/mskian/ssl-expiry-reminder)  
+
 SSL Expiry Reminder - Get SSL Expiry Notification remainder on Telegram and Gotify  
 
 ![SSL Expiry Reminder](https://raw.githubusercontent.com/mskian/ssl-expiry-reminder/master/Screenshot.png)  
