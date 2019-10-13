@@ -101,7 +101,7 @@ checkssl -r 2
 
 ## Storage
 
-- you API Key's and URL's are stored on your Disk in `JSON File`
+- you API Key's and URL's are stored on your Disk in `JSON File` Example File - <https://github.com/mskian/ssl-expiry-reminder/blob/master/config-example.json>
 - Folder name - `ssl-expiry-reminder-nodejs` and File Name `config.json`
 
 Linux - `~/.config` in Home  
