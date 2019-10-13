@@ -9,6 +9,7 @@ test
 .git*
 .eslintrc.js
 Screenshot.png
+config-example.json
 
 # Optional npm cache directory
 .npm

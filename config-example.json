@@ -1,0 +1,6 @@
+{
+	"key": "https://push.example.com/message?token=XXXXXXXXXXXXXXX",
+	"telegramkey": "https://api.telegram.org/bot<YOUR BOT API KEY>/sendMessage",
+	"telegramchatid": "123456789",
+	"sslremainder": "2"
+}
