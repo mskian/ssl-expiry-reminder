@@ -1,0 +1,20 @@
+# Dependency directory
+test.js
+backup.js
+.env
+node_modules
+test
+.npmignore
+.gitignore
+.git*
+.eslintrc.js
+Screenshot.png
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Editors
+.vscode/*

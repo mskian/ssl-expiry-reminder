@@ -8,11 +8,11 @@ echo -e "SSL Expiry Reminder"
 
 ## List the Domains to check SSL Expiry Date and Days
 sleep 1;
-node check.js santhoshveer.com
+checkssl -d santhoshveer.com
 sleep 2;
-node check.js forum.santhoshveer.com
+checkssl -d forum.santhoshveer.com
 sleep 2;
-node check.js status.santhoshveer.com
+checkssl -d status.santhoshveer.com
 
 echo -e "Done"
 

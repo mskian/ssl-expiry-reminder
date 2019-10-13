@@ -21,25 +21,58 @@ SSL Expiry Reminder - Get SSL Expiry Notification remainder on Telegram and Goti
 ```bash
 git clone https://github.com/mskian/ssl-expiry-reminder.git
 cd ssl-expiry-reminder
-yarn
+npm install
 ```
 
-- Create `.env` to Store the Telegram & Gotify APIs - Example 👇
+- Used as CLI
 
 ```bash
-touch .env
+npm link
+```
+
+#### (OR)
+
+- Install via `npm`
+
+```bash
+npm install -g ssl-expiry-reminder
 ```
 
 ```bash
-TELEGRAM_CHATID=<TELEGRAM CHANNEL ID OR CHAT ID>
-TELEGRAM_URL=https://api.telegram.org/bot<YOUR BOT API KEY>/sendMessage
-GOTIFY_URL=https://push.example.com/message?token=XXXXXXXXXXXXXXX
+$ checkssl -h
+Usage: checkssl [options]
+
+Options:
+  -V, --version                             output the version number
+  -d, --domain <domain name>                Add domain without http/https
+  -g, --gotify <GOTIFY API URL>             Gotify URL with Application Key
+  -t, --telegram <Telegram API URL>         Telegram API URL with your Bot Key
+  -c, --chatid <Telegram Chat ID>           Telegram Channel ID or Chat ID
+  -r, --remainder <Enter the Day Remaining 1 to 365>  Enter the Remaining Day to Get SSL Expiry Remainder Alert
+  -h, --help                                output usage information
+```
+
+- Next Store your Telegram & Gotify APIs by using this Below Command lines
+
+```bash
+$ Register Gotify API with URL
+checkssl -g https://push.example.com/message?token=XXXXXXXXXXXXXXX
+```
+
+```bash
+$ Register Telegram API URL and Botkey
+checkssl -t https://api.telegram.org/bot<YOUR BOT API KEY>/sendMessage
+```
+
+```bash
+$ Register Telegram your Chat id or Channel id
+checkssl -s 123456789
 ```
 
 - Testing - Execute the Script
 
-```js
-node check.js example.com
+```bash
+checkssl -d example.com
 ```
 
 ## Usage
@@ -59,14 +92,21 @@ chmod +x sslcheck.sh
 
 ## Customization
 
-- Change SSL Days Remaining Days - <https://github.com/mskian/ssl-expiry-reminder/blob/ff1af0ceaa5ffe44654b96868a68a10792691f4b/check.js#L88>
+- Change SSL remainder Day Remaining (Default is 5 days)
+- Add your Own 👇 Example
 
-```js
- if (certdata.days_remaining == '2') {
-                sendMessage('Status: Oops time to Renew SSL for \t' + lval + '\t' + emoji.get("rotating_light"));
-                gotifyMessage('Status: Oops time to Renew SSL \t' + lval + '\t' + emoji.get("rotating_light"));
-            }
+```bash
+checkssl -r 2
 ```
+
+## Storage
+
+- you API Key's and URL's are stored on your Disk in `JSON File`
+- Folder name - `ssl-expiry-reminder-nodejs` and File Name `config.json`
+
+Linux - `~/.config` in Home
+Windows - `%APPDATA%` Folder
+macOS - `~/Library/Application Support`
 
 ## Library
 
@@ -76,16 +116,22 @@ SSL Checker NPM Module - <https://www.npmjs.com/package/ssl-checker>
 
 v0.0.1
 
-- First Release
+- Revamped the Entire Script
+- Version Changes
+- Converted to CLI by using `commander` Module
+- replace `.env` with `conf` <https://github.com/sindresorhus/conf>
+- Add extra validation
+- Published in NPM
+- Now Easy to use and Manage
 
-v0.0.2
+v0.0.1-beta
 
 - Revamp
 - using Axios for Telegram instead of `telegram-bot-api` Module
 - Proper Input and Output Validation
 - Correct the version Number in `package.json`
 
-v0.0.3
+v0.0.2-beta
 
 - Update dependencies
 - Migrate SSL Checker Module to Latest JSON response
