@@ -120,6 +120,10 @@ SSL Checker NPM Module - <https://www.npmjs.com/package/ssl-checker>
 
 ## Changelogs
 
+v0.0.4
+
+- Minor Changes in `package.json`
+
 v0.0.3
 
 - Minor Update (Some Changes in Readme File)
