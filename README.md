@@ -9,8 +9,7 @@ SSL Expiry Reminder - Get SSL Expiry Notification remainder on Telegram and Goti
 ## Requirements
 
 - Node 8X LTS or 10X LTS
-- `yarn` for Managing the Packages - Installation - <https://yarnpkg.com/en/docs/install>
-- Bash to Run the Automated Tasks
+- Bash script to Run the Automated Tasks
 - Telegram Bot - <https://core.telegram.org/bots>
 - Gotify API - <https://gist.github.com/the-mcnaveen/2788985648490e7b3af24647247ed4e7#gistcomment-2996497>
 
@@ -48,25 +47,25 @@ Options:
   -g, --gotify <GOTIFY API URL>             Gotify URL with Application Key
   -t, --telegram <Telegram API URL>         Telegram API URL with your Bot Key
   -c, --chatid <Telegram Chat ID>           Telegram Channel ID or Chat ID
-  -r, --remainder <Enter the Day Remaining 1 to 365>  Enter the Remaining Day to Get SSL Expiry Remainder Alert
+  -r, --remainder <Enter the Day Remaining 1 to 10>  Enter the Remaining Day to Get SSL Expiry Remainder Alert
   -h, --help                                output usage information
 ```
 
-- Next Store your Telegram & Gotify APIs by using this Below Command lines
+- Next Store your Telegram & Gotify API by using this Below Command lines
 
 ```bash
 $ Register Gotify API with URL
-checkssl -g https://push.example.com/message?token=XXXXXXXXXXXXXXX
+checkssl --gotify https://push.example.com/message?token=XXXXXXXXXXXXXXX
 ```
 
 ```bash
 $ Register Telegram API URL and Botkey
-checkssl -t https://api.telegram.org/bot<YOUR BOT API KEY>/sendMessage
+checkssl --telegram https://api.telegram.org/bot<YOUR BOT API KEY>/sendMessage
 ```
 
 ```bash
 $ Register Telegram your Chat id or Channel id
-checkssl -s 123456789
+checkssl --chatid 123456789
 ```
 
 - Testing - Execute the Script
@@ -76,6 +75,12 @@ checkssl -d example.com
 ```
 
 ## Usage
+
+- Install the Bash Script for Automated Task
+
+```bash
+wget https://raw.githubusercontent.com/mskian/ssl-expiry-reminder/master/sslcheck.sh
+```
 
 - Just Run the Bash file `sslcheck.sh`
 
@@ -96,7 +101,7 @@ chmod +x sslcheck.sh
 - Add your Own 👇 Example
 
 ```bash
-checkssl -r 2
+checkssl --remainder 2
 ```
 
 ## Storage
@@ -114,6 +119,14 @@ macOS - `~/Library/Application Support`
 SSL Checker NPM Module - <https://www.npmjs.com/package/ssl-checker>
 
 ## Changelogs
+
+v0.0.3
+
+- Minor Update (Some Changes in Readme File)
+
+v0.0.2
+
+- Not much Changes
 
 v0.0.1
 

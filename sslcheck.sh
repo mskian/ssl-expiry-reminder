@@ -1,8 +1,6 @@
 #!/bin/bash
 
-## Set Cronjob - Run 25th of Everymonth
-
-## */3 * * * * /etc/ssl-expiry-reminder/sslcheck.sh > /dev/null 2>&1
+## Set Cronjob - For Automation
 
 echo -e "SSL Expiry Reminder"
 

@@ -17,7 +17,7 @@ program.version(pkg.version)
     .option('-g, --gotify <GOTIFY API URL>', 'Gotify URL with Application Key')
     .option('-t, --telegram <Telegram API URL>', 'Telegram API URL with your Bot Key')
     .option('-c, --chatid <Telegram Chat or Channel ID>', 'Telegram Channel ID or Chat ID')
-    .option('-r, --remainder <Enter the Day Remaining 1 to 365>', 'Enter the Remaining Day to Get SSL Expiry Remainder Alert')
+    .option('-r, --remainder <Enter the Day Remaining 1 to 10>', 'Enter the Remaining Day to Get SSL Expiry Remainder Alert')
 program.parse(process.argv);
 
 function sendMessage(message) {
