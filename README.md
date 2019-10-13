@@ -103,6 +103,7 @@ checkssl -r 2
 
 - you API Key's and URL's are stored on your Disk in `JSON File` Example File - <https://github.com/mskian/ssl-expiry-reminder/blob/master/config-example.json>
 - Folder name - `ssl-expiry-reminder-nodejs` and File Name `config.json`
+- You **No need** to create this File and Folder it will Automatically Generate & Store your Data's
 
 Linux - `~/.config` in Home  
 Windows - `%APPDATA%` Folder  
