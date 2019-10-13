@@ -7,7 +7,7 @@
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"bin": {
-		"checkssl": "check.js"
+		"checkssl": "./check.js"
 	},
 	"repository": {
 		"type": "git",
