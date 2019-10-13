@@ -87,7 +87,7 @@ chmod +x sslcheck.sh
 ./sslcheck.sh
 ```
 
-- Replace mine Sites domain with your's <https://github.com/mskian/ssl-expiry-reminder/blob/ff1af0ceaa5ffe44654b96868a68a10792691f4b/sslcheck.sh#L9>
+- Replace mine Sites domain with your's <https://raw.githubusercontent.com/mskian/ssl-expiry-reminder/master/sslcheck.sh>
 - Create Cron job for Automate checking
 
 ## Customization
