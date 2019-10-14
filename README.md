@@ -117,8 +117,8 @@ checkssl --remainder 2
 - Folder name - `ssl-expiry-reminder-nodejs` and File Name `config.json`
 - You **No need** to create this File and Folder it will Automatically Generate & Store your Data's
 
-Linux - `~/.config` in Home
-Windows - `AppData` Folder `c:\Users\username\AppData\Roaming\ssl-expiry-reminder-nodejs`
+Linux - `~/.config` in Home  
+Windows - `AppData` Folder `c:\Users\username\AppData\Roaming\ssl-expiry-reminder-nodejs`  
 macOS - `~/Library/Application Support`  
 
 ## Library
