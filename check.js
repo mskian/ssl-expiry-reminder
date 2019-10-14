@@ -59,7 +59,7 @@ function gotifyMessage(hello) {
     if (GOTIFY_API) {
         var url = GOTIFY_API
         var bodyFormData = {
-            title: 'Uptime Status',
+            title: 'SSL Expiry reminder',
             message: hello,
             priority: 5
         };
