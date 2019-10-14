@@ -11,6 +11,7 @@ test
 Screenshot.png
 config-example.json
 sslcheck.sh
+.travis.yml
 
 # Optional npm cache directory
 .npm

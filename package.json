@@ -4,7 +4,7 @@
 	"description": "SSL Expiry Reminder - Get Notification remainder on Telegram and Gotify",
 	"main": "check.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"start": "node check.js -s status.santhoshveer.com"
 	},
 	"bin": {
 		"checkssl": "./check.js"
@@ -18,7 +18,8 @@
 		"VPS",
 		"ssl",
 		"ssl checker",
-		"ssl expiry checker"
+		"ssl expiry checker",
+		"gotify"
 	],
 	"author": "Santhosh Veer",
 	"license": "MIT",

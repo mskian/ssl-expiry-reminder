@@ -1,6 +1,6 @@
 # SSL Expiry Reminder
 
-[![dependencies Status](https://david-dm.org/mskian/ssl-expiry-reminder/status.svg)](https://david-dm.org/mskian/ssl-expiry-reminder)  
+[![dependencies Status](https://david-dm.org/mskian/ssl-expiry-reminder/status.svg)](https://david-dm.org/mskian/ssl-expiry-reminder) [![Build Status](https://travis-ci.org/mskian/ssl-expiry-reminder.svg?branch=master)](https://travis-ci.org/mskian/ssl-expiry-reminder)  
 
 SSL Expiry Reminder - Get SSL Expiry Notification remainder on Telegram and Gotify  
 
@@ -29,7 +29,7 @@ npm install
 npm link
 ```
 
-#### (OR)
+(OR)
 
 - Install via `npm`
 
@@ -39,16 +39,17 @@ npm install -g ssl-expiry-reminder
 
 ```bash
 $ checkssl -h
-Usage: checkssl [options]
+Usage: check [options]
 
 Options:
-  -V, --version                             output the version number
-  -d, --domain <domain name>                Add domain without http/https
-  -g, --gotify <GOTIFY API URL>             Gotify URL with Application Key
-  -t, --telegram <Telegram API URL>         Telegram API URL with your Bot Key
-  -c, --chatid <Telegram Chat ID>           Telegram Channel ID or Chat ID
+  -V, --version                                      output the version number
+  -d, --domain <domain name>                         Add domain without http/https (This Command line Argument for Automation Task)
+  -s, --status <domain name>                         Add domain without http/https
+  -g, --gotify <GOTIFY API URL>                      Gotify URL with Application Key
+  -t, --telegram <Telegram API URL>                  Telegram API URL with your Bot Key
+  -c, --chatid <Telegram Chat or Channel ID>         Telegram Channel ID or Chat ID
   -r, --remainder <Enter the Day Remaining 1 to 10>  Enter the Remaining Day to Get SSL Expiry Remainder Alert
-  -h, --help                                output usage information
+  -h, --help                                         output usage information
 ```
 
 - Next Store your Telegram & Gotify API by using this Below Command lines
@@ -71,10 +72,16 @@ checkssl --chatid 123456789
 - Testing - Execute the Script
 
 ```bash
-checkssl -d example.com
+checkssl --status example.com
 ```
 
 ## Usage
+
+For Automation it having Seperate Command Line Argumet it will Send the Push Notification Alert via Telegram & Gotify
+
+```bash
+checkssl -d example.com
+```
 
 - Install the Bash Script for Automated Task
 
@@ -106,12 +113,12 @@ checkssl --remainder 2
 
 ## Storage
 
-- you API Key's and URL's are stored on your Disk in `JSON File` Example File - <https://github.com/mskian/ssl-expiry-reminder/blob/master/config-example.json>
+- Your API Key's and URL's are stored on your Disk in `JSON File` Example File - <https://github.com/mskian/ssl-expiry-reminder/blob/master/config-example.json>
 - Folder name - `ssl-expiry-reminder-nodejs` and File Name `config.json`
 - You **No need** to create this File and Folder it will Automatically Generate & Store your Data's
 
-Linux - `~/.config` in Home  
-Windows - `%APPDATA%` Folder  
+Linux - `~/.config` in Home
+Windows - `AppData` Folder `c:\Users\username\AppData\Roaming\ssl-expiry-reminder-nodejs`
 macOS - `~/Library/Application Support`  
 
 ## Library
@@ -119,6 +126,11 @@ macOS - `~/Library/Application Support`
 SSL Checker NPM Module - <https://www.npmjs.com/package/ssl-checker>
 
 ## Changelogs
+
+v0.0.5
+
+- New Command to check domain SSL Status `checlssl -s example.com`
+- Travis Build Test
 
 v0.0.4
 

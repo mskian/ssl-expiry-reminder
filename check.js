@@ -13,7 +13,8 @@ const config = new Conf({
 });
 
 program.version(pkg.version)
-    .option('-d, --domain <domain name>', 'Add domain without http/https')
+    .option('-d, --domain <domain name>', 'Add domain without http/https (This Command line Argument for Automation Task)')
+    .option('-s, --status <domain name>', 'Add domain without http/https')
     .option('-g, --gotify <GOTIFY API URL>', 'Gotify URL with Application Key')
     .option('-t, --telegram <Telegram API URL>', 'Telegram API URL with your Bot Key')
     .option('-c, --chatid <Telegram Chat or Channel ID>', 'Telegram Channel ID or Chat ID')
@@ -121,6 +122,21 @@ if (program.gotify) {
             gotifyMessage('Status: Oops time to Renew SSL \t' + lval + '\t' + emoji.get("rotating_light"));
         }
 
+    }).catch((err) => {
+        if (err.code === 'ENOTFOUND') {
+            console.log('Fix Hostname or Provide Correct Domain Name');
+        } else if (err.code === 'ECONNREFUSED') {
+            console.log('Fix Hostname or Provide Correct Domain Name');
+        }
+    });
+} else if (program.status) {
+    const userdomain = program.status;
+    sslChecker(userdomain).then((certdata) => {
+        var startdate = new Date(certdata.validFrom);
+        var enddate = new Date(certdata.validTo);
+        var certstart = moment(startdate);
+        var certend = moment(enddate);
+        console.log(userdomain + '\n' + 'Certificate Valid from' + '\n' + certstart.format('LLLL') + '\n' + 'Certificate Expirey date' + '\n' + certend.format('LLLL') + '\n' + 'Days Remaining:' + '\t' + certdata.daysRemaining);
     }).catch((err) => {
         if (err.code === 'ENOTFOUND') {
             console.log('Fix Hostname or Provide Correct Domain Name');
