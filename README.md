@@ -124,7 +124,7 @@ macOS - `~/Library/Application Support`
 
 ## 🖥 Supported OS
 
-- I am using Linux also I am using Linux Server (Ubuntu) I am testing it on both LTS Version on Ubuntu it's Working Well  
+- I am using Linux also I am using Linux Cloud VPS Server (Ubuntu) I am testing it on both LTS Version on Ubuntu it's Working Well  
 
 - Locally you can use this on your Desktop/laptop with Linux Distro/Windows/macOS  
 
