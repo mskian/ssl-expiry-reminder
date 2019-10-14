@@ -46,7 +46,7 @@ function sendMessage(message) {
                 if (!error.response) {
                     console.log('Telegram API URL is Missing');
                 } else {
-                    console.log(error.response.data);
+                    console.log('Something Went Wrong - Enter the Correct Telegram API URL or Chat ID');
                 }
             });
     } else {
@@ -78,7 +78,7 @@ function gotifyMessage(hello) {
                 if (!error.response) {
                     console.log('Gotify API URL is Missing');
                 } else {
-                    console.log(error.response.data);
+                    console.log('Something Went Wrong - Enter the Correct API URL');
                 }
             });
     } else {

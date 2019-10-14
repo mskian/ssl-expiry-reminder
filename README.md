@@ -144,6 +144,10 @@ If you find any issues create an issue Ticket Here ✉ <https://github.com/mskia
 
 ## 📝 Changelogs
 
+v0.0.8
+
+- Replace Response data with Custom error message in teleram and gotify function
+
 v0.0.7
 
 - Improved Readme
