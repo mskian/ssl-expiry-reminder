@@ -104,7 +104,7 @@ chmod +x sslcheck.sh
 
 ## Customization
 
-- Change SSL remainder Day Remaining (Default is 5 days)
+- Change SSL Remaining Day (Default Remaining day is 5)
 - Add your Own 👇 Example
 
 ```bash
