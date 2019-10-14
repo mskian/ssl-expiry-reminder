@@ -127,6 +127,10 @@ SSL Checker NPM Module - <https://www.npmjs.com/package/ssl-checker>
 
 ## Changelogs
 
+v0.0.6
+
+- Update Gotify Push title
+
 v0.0.5
 
 - New Command to check domain SSL Status `checlssl -s example.com`
