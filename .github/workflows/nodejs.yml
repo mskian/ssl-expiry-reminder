@@ -1,0 +1,17 @@
+name: ssl-expiry-reminder-test
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@master
+    - uses: actions/setup-node@v1
+      with:
+         node-version: '10.x'
+    - name: use npm
+      run: |
+       npm install
+       npm start
