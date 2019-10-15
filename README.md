@@ -1,6 +1,6 @@
 # SSL Expiry Reminder 🔔
 
-[![dependencies Status](https://david-dm.org/mskian/ssl-expiry-reminder/status.svg)](https://david-dm.org/mskian/ssl-expiry-reminder) [![Build Status](https://travis-ci.org/mskian/ssl-expiry-reminder.svg?branch=master)](https://travis-ci.org/mskian/ssl-expiry-reminder)  
+[![dependencies Status](https://david-dm.org/mskian/ssl-expiry-reminder/status.svg)](https://david-dm.org/mskian/ssl-expiry-reminder) [![Build Status](https://travis-ci.org/mskian/ssl-expiry-reminder.svg?branch=master)](https://travis-ci.org/mskian/ssl-expiry-reminder) [![Github Workflow](https://github.com/mskian/ssl-expiry-reminder/workflows/ssl-expiry-reminder-test/badge.svg)](https://github.com/mskian/ssl-expiry-reminder/actions)  
 
 SSL Expiry Reminder and SSL Status Checker - Get SSL Expiry Notification remainder on Telegram and Gotify  
 
@@ -143,6 +143,10 @@ Your PR's are Always welcome 🦄
 If you find any issues create an issue Ticket Here ✉ <https://github.com/mskian/ssl-expiry-reminder/issues>
 
 ## 📝 Changelogs
+
+v0.0.9
+
+- Add Github Actions Workflows
 
 v0.0.8
 

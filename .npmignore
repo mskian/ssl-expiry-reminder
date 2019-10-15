@@ -7,6 +7,7 @@ test
 .npmignore
 .gitignore
 .git*
+.github*
 .eslintrc.js
 Screenshot.png
 config-example.json
