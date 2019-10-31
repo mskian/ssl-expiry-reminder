@@ -148,6 +148,10 @@ If you find any issues create an issue Ticket Here ✉ <https://github.com/mskia
 
 ## 📝 Changelogs
 
+v0.2.0
+
+- No Changes - Update the test URL Only
+
 v0.0.9
 
 - Add Github Actions Workflows
