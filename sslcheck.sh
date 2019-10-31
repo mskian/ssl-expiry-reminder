@@ -10,7 +10,7 @@ checkssl -d santhoshveer.com
 sleep 2;
 checkssl -d forum.santhoshveer.com
 sleep 2;
-checkssl -d status.santhoshveer.com
+checkssl -d task.santhoshveer.com
 
 echo -e "Done"
 
