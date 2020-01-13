@@ -148,6 +148,10 @@ If you find any issues create an issue Ticket Here ✉ <https://github.com/mskia
 
 ## 📝 Changelogs
 
+v0.2.2
+
+- Correct the Spelling Errors
+
 v0.2.1
 
 - Correct the Spelling Errors
