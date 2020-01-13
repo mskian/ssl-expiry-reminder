@@ -150,7 +150,7 @@ If you find any issues create an issue Ticket Here ✉ <https://github.com/mskia
 
 v0.2.2
 
-- Correct the Spelling Errors
+- Update dependencies
 
 v0.2.1
 
