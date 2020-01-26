@@ -14,6 +14,7 @@ config-example.json
 sslcheck.sh
 .travis.yml
 .dependabot
+renovate.json
 
 # Optional npm cache directory
 .npm
