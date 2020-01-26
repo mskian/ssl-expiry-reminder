@@ -13,6 +13,7 @@ Screenshot.png
 config-example.json
 sslcheck.sh
 .travis.yml
+.dependabot
 
 # Optional npm cache directory
 .npm
