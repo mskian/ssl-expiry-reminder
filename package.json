@@ -28,7 +28,7 @@
 	},
 	"homepage": "https://github.com/mskian/ssl-expiry-reminder/#readme",
 	"dependencies": {
-		"axios": "^0.19.1",
+		"axios": "^0.19.2",
 		"commander": "^4.1.0",
 		"conf": "^6.2.0",
 		"moment": "^2.24.0",
