@@ -7,7 +7,7 @@
 		"automerge": false
 	},
 	"lockFileMaintenance": {
-		"enabled": true,
+		"enabled": false,
 		"automerge": false
 	},
 	"travis": {
