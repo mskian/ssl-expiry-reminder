@@ -2,7 +2,7 @@
 
 [![dependencies Status](https://david-dm.org/mskian/ssl-expiry-reminder/status.svg)](https://david-dm.org/mskian/ssl-expiry-reminder) [![Build Status](https://travis-ci.org/mskian/ssl-expiry-reminder.svg?branch=master)](https://travis-ci.org/mskian/ssl-expiry-reminder) [![Github Workflow](https://github.com/mskian/ssl-expiry-reminder/workflows/ssl-expiry-reminder-test/badge.svg)](https://github.com/mskian/ssl-expiry-reminder/actions)  
 
-SSL Expiry Reminder and SSL Status Checker - Get SSL Expiry Notification remainder on Telegram and Gotify  
+SSL Expiry Reminder and SSL Status Checker - Get SSL Expiry Notification reminder on Telegram and Gotify  
 
 ![SSL Expiry Reminder](https://raw.githubusercontent.com/mskian/ssl-expiry-reminder/master/Screenshot.png)  
 
@@ -19,7 +19,7 @@ If you Like My Work then Buy a Coffee for me 😄
 
 ## 🔧 Installation
 
-- Clone this Respo via Git
+- Clone this Repo via Git
 
 ```bash
 git clone https://github.com/mskian/ssl-expiry-reminder.git
@@ -132,7 +132,7 @@ macOS - `~/Library/Application Support`
 
 - Locally you can use this on your Desktop/laptop with Linux Distro/Windows/macOS  
 
-- I Locally tested it on tested on Windows 10 it's Working well but Some users facing an issues like `checkssl is not recongized as an internal or external command, operable program or batch file`  if you are facing this issue on your Windows System Just uninstall & reinstall the Node.js LTS version & try  
+- I Locally tested it on tested on Windows 10 it's Working well but Some users facing an issues like `checkssl is not recongized as an internal or external command, operable program or batch file`  if you are facing this issue on your Windows System Just uninstall & reinstall the Node.js LTS version & try again 
 
 ## 📖 Library
 
