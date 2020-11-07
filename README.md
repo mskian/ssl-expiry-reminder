@@ -15,7 +15,7 @@ If you Like My Work then Buy a Coffee for me 😄
 - Node 8X LTS or 10X LTS
 - Bash script to Run the Automated Tasks
 - Telegram Bot - <https://core.telegram.org/bots>
-- Gotify API - <https://gist.github.com/the-mcnaveen/2788985648490e7b3af24647247ed4e7#gistcomment-2996497>
+- Gotify API - <https://gist.github.com/mcnaveen/2788985648490e7b3af24647247ed4e7#gistcomment-2996497>
 
 ## 🔧 Installation
 
