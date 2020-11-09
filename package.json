@@ -33,6 +33,6 @@
 		"conf": "^7.1.2",
 		"moment": "^2.29.1",
 		"node-emoji": "^1.10.0",
-		"ssl-checker": "^2.0.6"
+		"ssl-checker": "^2.0.7"
 	}
 }
