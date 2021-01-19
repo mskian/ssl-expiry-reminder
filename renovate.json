@@ -19,10 +19,9 @@
 	"labels": [
 		"renovate"
 	],
-	"prHourlyLimit": 4,
-	"prConcurrentLimit": 15,
 	"rangeStrategy": "bump",
 	"bumpVersion": null,
 	"semanticCommits": true,
-	"schedule": "before 8am on Monday"
+	"timezone": "Asia/Kolkata",
+	"schedule": "on saturday and sunday"
 }

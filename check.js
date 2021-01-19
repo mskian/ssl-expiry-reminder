@@ -86,24 +86,26 @@ function gotifyMessage(hello) {
     }
 }
 
-if (program.gotify) {
-    config.set('key', program.gotify);
+const options = program.opts();
+
+if (options.gotify) {
+    config.set('key', options.gotify);
     var GOTIFY_URL = config.get('key');
     console.log('your Gotify API Key is Stored\t' + GOTIFY_URL);
-} else if (program.telegram) {
-    config.set('telegramkey', program.telegram);
+} else if (options.telegram) {
+    config.set('telegramkey', options.telegram);
     var TELEGRAM_URL = config.get('telegramkey');
     console.log('your Telegram API URL is Stored\t' + TELEGRAM_URL);
-} else if (program.chatid) {
-    config.set('telegramchatid', program.chatid);
+} else if (options.chatid) {
+    config.set('telegramchatid', options.chatid);
     var TELEGRAM_CHATID = config.get('telegramchatid');
     console.log('your Telegram Chat ID is Stored\t' + TELEGRAM_CHATID);
-} else if (program.remainder) {
-    config.set('sslremainder', program.remainder);
+} else if (options.remainder) {
+    config.set('sslremainder', options.remainder);
     var SSL_REMAINDER = config.get('sslremainder');
     console.log('your SSL Expiry Remainder day saved\t' + SSL_REMAINDER);
-} else if (program.domain) {
-    const lval = program.domain;
+} else if (options.domain) {
+    const lval = options.domain;
     sslChecker(lval).then((certdata) => {
 
         console.log(certdata);
@@ -129,8 +131,8 @@ if (program.gotify) {
             console.log('Fix Hostname or Provide Correct Domain Name');
         }
     });
-} else if (program.status) {
-    const userdomain = program.status;
+} else if (options.status) {
+    const userdomain = options.status;
     sslChecker(userdomain).then((certdata) => {
         var startdate = new Date(certdata.validFrom);
         var enddate = new Date(certdata.validTo);
