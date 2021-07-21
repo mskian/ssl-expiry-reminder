@@ -6,8 +6,12 @@ const program = require('commander');
 const Conf = require('conf');
 var moment = require('moment');
 var emoji = require('node-emoji');
+const updateNotifier = require('update-notifier');
 
 var pkg = require('./package.json');
+updateNotifier({
+    pkg
+}).notify();
 const config = new Conf({
     projectName: 'ssl-expiry-reminder'
 });
