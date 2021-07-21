@@ -136,7 +136,7 @@ macOS - `~/Library/Application Support`
 
 ## 📖 Library
 
-SSL Checker NPM Module - <https://www.npmjs.com/package/ssl-checker>
+SSL Checker NPM Module - <https://github.com/dyaa/ssl-checker>
 
 ## 🏗 Contributions
 
