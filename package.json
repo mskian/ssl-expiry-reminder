@@ -1,6 +1,6 @@
 {
 	"name": "ssl-expiry-reminder",
-	"version": "0.2.9",
+	"version": "0.2.10",
 	"description": "SSL Expiry Reminder - Get Notification remainder on Telegram and Gotify",
 	"main": "check.js",
 	"scripts": {
