@@ -1,22 +1,22 @@
 #!/usr/bin/env node
 
-const sslChecker = require('ssl-checker');
-const axios = require('axios');
-const program = require('commander');
-const Conf = require('conf');
-var moment = require('moment');
-var emoji = require('node-emoji');
-const updateNotifier = require('update-notifier');
+import sslChecker from 'ssl-checker';
+import axios from 'axios';
+import { program } from 'commander';
+import Conf from 'conf';
+import moment from 'moment';
+import emoji from 'node-emoji';
+import updateNotifier from 'update-notifier';
+import { readFileSync } from "fs";
+const packageJSON = JSON.parse(readFileSync(new URL("./package.json", import.meta.url)));
 
-var pkg = require('./package.json');
-updateNotifier({
-    pkg
-}).notify();
+updateNotifier({pkg: packageJSON}).notify();
+
 const config = new Conf({
     projectName: 'ssl-expiry-reminder'
 });
 
-program.version(pkg.version)
+program.version(packageJSON.version)
     .option('-d, --domain <domain name>', 'Add domain without http/https (This Command line Argument for Automation Task)')
     .option('-s, --status <domain name>', 'Add domain without http/https')
     .option('-g, --gotify <GOTIFY API URL>', 'Gotify URL with Application Key')

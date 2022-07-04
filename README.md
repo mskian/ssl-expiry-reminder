@@ -1,6 +1,6 @@
 # SSL Expiry Reminder 🔔
 
-[![dependencies Status](https://david-dm.org/mskian/ssl-expiry-reminder/status.svg)](https://david-dm.org/mskian/ssl-expiry-reminder) [![Github Workflow](https://github.com/mskian/ssl-expiry-reminder/workflows/ssl-expiry-reminder-test/badge.svg)](https://github.com/mskian/ssl-expiry-reminder/actions)  
+[![Github Workflow](https://github.com/mskian/ssl-expiry-reminder/workflows/ssl-expiry-reminder-test/badge.svg)](https://github.com/mskian/ssl-expiry-reminder/actions)  
 
 SSL Expiry Reminder and SSL Status Checker - Get SSL Expiry Notification reminder on Telegram and Gotify  
 
@@ -12,7 +12,7 @@ If you Like My Work then Buy a Coffee for me 😄
 
 ## ⚙ Requirements
 
-- Node 8X LTS or 10X LTS
+- Node 14X LTS or 16X LTS
 - Bash script to Run the Automated Tasks
 - Telegram Bot - <https://core.telegram.org/bots>
 - Gotify API - <https://gist.github.com/mcnaveen/2788985648490e7b3af24647247ed4e7#gistcomment-2996497>

@@ -8,7 +8,7 @@ echo -e "SSL Expiry Reminder"
 sleep 1;
 checkssl -d santhoshveer.com
 sleep 2;
-checkssl -d forum.santhoshveer.com
+checkssl -d notes.santhoshveer.com
 sleep 2;
 checkssl -d status.santhoshveer.com
 
