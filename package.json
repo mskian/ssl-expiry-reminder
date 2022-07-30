@@ -31,7 +31,7 @@
 	"dependencies": {
 		"axios": "^0.27.2",
 		"commander": "^9.4.0",
-		"conf": "^10.1.2",
+		"conf": "^10.2.0",
 		"moment": "^2.29.4",
 		"node-emoji": "^1.11.0",
 		"ssl-checker": "^2.0.7",
