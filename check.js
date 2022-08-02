@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import sslChecker from 'ssl-checker';
+import sslChecker from 'ssl-checker-node-api';
 import axios from 'axios';
 import { program } from 'commander';
 import Conf from 'conf';
