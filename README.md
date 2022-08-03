@@ -2,9 +2,11 @@
 
 [![Github Workflow](https://github.com/mskian/ssl-expiry-reminder/workflows/ssl-expiry-reminder-test/badge.svg)](https://github.com/mskian/ssl-expiry-reminder/actions)  
 
-SSL Expiry Reminder and SSL Status Checker - Get SSL Expiry Notification reminder on Telegram and Gotify  
+SSL Expiry Reminder and SSL Status Checker - Get SSL Expiry Notification reminder on Telegram and Gotify.  
 
-![SSL Expiry Reminder](https://raw.githubusercontent.com/mskian/ssl-expiry-reminder/master/Screenshot.png)  
+![SSL Expiry Reminder Gotify](https://raw.githubusercontent.com/mskian/ssl-expiry-reminder/master/Screenshot.png)  
+
+![SSL Expiry Reminder Telegram](https://raw.githubusercontent.com/mskian/ssl-expiry-reminder/master/screenshot-telegram.png)  
 
 If you Like My Work then Buy a Coffee for me 😄  
 
@@ -136,7 +138,7 @@ macOS - `~/Library/Application Support`
 
 ## 📖 Library
 
-SSL Checker NPM Module - <https://github.com/dyaa/ssl-checker>
+SSL Checker NPM Module - <https://github.com/mskian/ssl-checker-node-api>
 
 ## 🏗 Contributions
 
