@@ -153,8 +153,10 @@ if (options.gotify) {
         console.log(userdomain + '\n' + 'Certificate Valid from' + '\n' + certstart.format('LLLL') + '\n' + 'Certificate Expiry date' + '\n' + certend.format('LLLL') + '\n' + 'Days Remaining:' + '\t' + certdata.daysRemaining + '\n' + 'Provider: ' + provider);
     }).catch((err) => {
         if (err.code === 'ENOTFOUND') {
+            spinner.stop();
             console.log('Fix Hostname or Provide Correct Domain Name');
         } else if (err.code === 'ECONNREFUSED') {
+            spinner.stop();
             console.log('Fix Hostname or Provide Correct Domain Name');
         }
     });
