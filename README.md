@@ -4,7 +4,11 @@
 
 SSL Expiry Reminder and SSL Status Checker - Get SSL Expiry Notification reminder on Telegram and Gotify.  
 
+## Gotify  
+
 ![SSL Expiry Reminder Gotify](https://raw.githubusercontent.com/mskian/ssl-expiry-reminder/master/Screenshot.png)  
+
+## Telegram  
 
 ![SSL Expiry Reminder Telegram](https://raw.githubusercontent.com/mskian/ssl-expiry-reminder/master/screenshot-telegram.png)  
 
@@ -79,6 +83,12 @@ checkssl --chatid 123456789
 
 ```bash
 checkssl --status example.com
+```
+
+- Test via `npx`
+
+```sh
+npx ssl-expiry-reminder -h
 ```
 
 ## 🕹 Usage

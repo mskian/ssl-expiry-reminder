@@ -6,6 +6,7 @@ import { program } from 'commander';
 import Conf from 'conf';
 import moment from 'moment';
 import emoji from 'node-emoji';
+import ora from 'ora';
 import updateNotifier from 'update-notifier';
 import { readFileSync } from "fs";
 const packageJSON = JSON.parse(readFileSync(new URL("./package.json", import.meta.url)));
@@ -137,12 +138,19 @@ if (options.gotify) {
     });
 } else if (options.status) {
     const userdomain = options.status;
+    const spinner = new ora({
+		text: 'Fetching SSL Data...',
+		spinner: 'hamburger'
+	});
+	spinner.start();
     sslChecker(userdomain).then((certdata) => {
         var startdate = new Date(certdata.validFrom);
         var enddate = new Date(certdata.validTo);
         var certstart = moment(startdate);
         var certend = moment(enddate);
-        console.log(userdomain + '\n' + 'Certificate Valid from' + '\n' + certstart.format('LLLL') + '\n' + 'Certificate Expiry date' + '\n' + certend.format('LLLL') + '\n' + 'Days Remaining:' + '\t' + certdata.daysRemaining);
+        var provider = certdata.issuer
+        spinner.stop();
+        console.log(userdomain + '\n' + 'Certificate Valid from' + '\n' + certstart.format('LLLL') + '\n' + 'Certificate Expiry date' + '\n' + certend.format('LLLL') + '\n' + 'Days Remaining:' + '\t' + certdata.daysRemaining + '\n' + 'Provider: ' + provider);
     }).catch((err) => {
         if (err.code === 'ENOTFOUND') {
             console.log('Fix Hostname or Provide Correct Domain Name');
