@@ -34,7 +34,7 @@
 		"conf": "^11.0.1",
 		"moment": "^2.29.4",
 		"node-emoji": "^1.11.0",
-		"ora": "^6.2.0",
+		"ora": "^6.3.0",
 		"ssl-checker-node-api": "^0.0.1",
 		"update-notifier": "^6.0.2"
 	}
