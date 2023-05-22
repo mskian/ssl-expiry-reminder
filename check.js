@@ -5,7 +5,7 @@ import axios from 'axios';
 import { program } from 'commander';
 import Conf from 'conf';
 import moment from 'moment';
-import emoji from 'node-emoji';
+import * as emoji from 'node-emoji'
 import ora from 'ora';
 import updateNotifier from 'update-notifier';
 import { readFileSync } from "fs";
