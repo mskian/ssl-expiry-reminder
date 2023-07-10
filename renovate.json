@@ -10,12 +10,6 @@
 		"enabled": false,
 		"automerge": false
 	},
-	"travis": {
-		"enabled": true
-	},
-	"node": {
-		"supportPolicy": ["lts_active"]
-	},
 	"labels": [
 		"renovate"
 	],
