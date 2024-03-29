@@ -40,7 +40,7 @@ docker run -d \
     -e GOTIFY_DOMAIN="your_gotify_domain" \
     -e REMAINDER_DAYS_TO_EXPIRE="7" \
     -e CHECKING_INTERVAL_IN_DAYS="7" \
-    schecher/ssl-expiry-reminder
+    schecher/ssl-expiry-reminder:latest
 ```
 
 - Run via `docker compose via docker hub image`
@@ -49,7 +49,7 @@ version: '3'
 services:
   sslchecker:
     container_name: ssl_checker_01
-    image: schecher/ssl-expiry-reminder
+    image: schecher/ssl-expiry-reminder:latest
     environment:
       - DOMAINS=domain1.com,domain2.com
       - TELGRAM_TOKEN=your_telegram_token
@@ -232,6 +232,9 @@ If you find any issues create an issue Ticket Here ✉
 - MIT
 
 ## 📃 Changelog
+
+### v1.0.1.0
+- Docker image size was optimized by 66,6% (370mb => 123mb)
 
 ### v1.0.0.0
 - Docker support was added
