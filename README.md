@@ -29,7 +29,7 @@ If you Like My Work then Buy a Coffee for me 😄
 ## 🔧 Installation (docker) 🐳
 Tip: If you don't want to have Telegram, for example, simply delete the line or in the compose variant comment it out with '#'
 
-- Run via `docker run`
+- Run via `docker run via docker hub image`
 ```bash
 docker run -d \
     --name ssl_checker_01 \
@@ -43,7 +43,7 @@ docker run -d \
     schecher/ssl-expiry-reminder
 ```
 
-- Run via `docker compose`
+- Run via `docker compose via docker hub image`
 ```yaml
 version: '3'
 services:
@@ -60,7 +60,7 @@ services:
       - CHECKING_INTERVAL_IN_DAYS=7
 ```
 
-- Run via `source code`
+- Run via `docker run via source code`
 ```bash
 git clone https://github.com/mskian/ssl-expiry-reminder.git
 
@@ -78,6 +78,17 @@ docker run -d \
     -e REMAINDER_DAYS_TO_EXPIRE="7" \
     -e CHECKING_INTERVAL_IN_DAYS="7" \
     sslreminder
+```
+
+- Run via `docker compose via source code`
+```yaml
+git clone https://github.com/mskian/ssl-expiry-reminder.git
+
+cd ssl-expiry-reminder
+
+nano docker-compose.yaml  [to edit the env vars]
+
+docker compose up -d
 ```
 
 ## 🔧 Installation (normally)
