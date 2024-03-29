@@ -15,6 +15,13 @@ if [ -z "$TELGRAM_TOKEN" ] && [ -z "$GOTIFY_TOKEN" ]; then
     exit 1
 fi
 
+#if gotify token is provided, check if url is provided
+if [ ! -z "$GOTIFY_TOKEN" ] && [ -z "$GOTIFY_DOMAIN" ]; then
+    echo "You provide the 'GOTIFY_TOKEN', so please provide also the 'GOTIFY_DOMAIN' environment variable"
+    echo "No 'GOTIFY_DOMAIN' provided, EXIT..."
+    exit 1
+fi
+
 #if telegram token is provided, check if chat id is provided
 if [ ! -z "$TELGRAM_TOKEN" ] && [ -z "$TELGRAM_CHAT_ID" ]; then
     echo "You provide the 'TELGRAM_TOKEN', so please provide also the 'TELGRAM_CHAT_ID' environment variable"
@@ -38,12 +45,12 @@ echo "Configuring the config file..."
 
 #check if gotify token is provided
 if [ ! -z "$GOTIFY_TOKEN" ]; then
-    checkssl --gotify https://push.example.com/message?token=XXXXXXXXXXXXXXX
+    checkssl --gotify https://$GOTIFY_DOMAIN/message?token=$GOTIFY_TOKEN
 fi
 
 #check if telegram token is provided
 if [ ! -z "$TELGRAM_TOKEN" ]; then
-    checkssl --telegram https://api.telegram.org/bot<YOUR BOT API KEY>/sendMessage
+    checkssl --telegram https://api.telegram.org/bot$TELGRAM_TOKEN/sendMessage
     checkssl --chatid 123456789
 fi
 
@@ -59,5 +66,5 @@ while true; do
     done
     echo "Checking the SSL certificates is done"
     echo "Sleeping for 1 day..."
-    sleep 1d
+    sleep 1m
 done
