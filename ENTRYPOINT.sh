@@ -74,8 +74,8 @@ echo "Configuring the config file is done"
 # This allows reading the content of the variable as input.
 IFS=',' read -ra DOMAIN_ARRAY <<< "$DOMAINS"
 
-
-for i in "${DOMAIN_ARRAY[@]}"; do
+##endless loop
+while true; do
     echo "Checking the SSL certificates..."
     echo
 
