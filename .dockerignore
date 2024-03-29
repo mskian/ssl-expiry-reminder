@@ -9,6 +9,10 @@ test
 README.md
 screenshot-telegram.png
 Screenshot.png
+LICENSE
+config-example.json 
+renovate.json
+dockerfile
 
 #dot folder
 .github/
