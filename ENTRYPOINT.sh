@@ -36,10 +36,6 @@ if [ -z "$REMAINDER_DAYS_TO_EXPIRE" ]; then
     exit 1
 fi
 
-#split the domains by ',' and store them in an array
-DOMAIN_ARRAY=',' read -r -a domains <<< "$DOMAINS"
-
-
 #configure the config file
 echo "Configuring the config file..."
 
@@ -54,17 +50,36 @@ if [ ! -z "$TELGRAM_TOKEN" ]; then
     checkssl --chatid 123456789
 fi
 
-checkssl --remainder 30
+checkssl --remainder $REMAINDER_DAYS_TO_EXPIRE
 
 echo "Configuring the config file is done"
 
-#start the main loop
-while true; do
+
+# IFS=',': Set the Internal Field Separator to comma.
+# This means comma will be used as the delimiter for input.
+
+# read -ra ADDR: Read the input into the array variable ADDR.
+# -r: Disable backslash escaping, so backslashes are not interpreted as escape characters.
+# -a ADDR: Read the input into an array named ADDR.
+
+# <<< => here-string redirection operator
+# <<< "$DOMAINS": Redirect the content of the variable DOMAINS as input to the preceding command.
+# This allows reading the content of the variable as input.
+IFS=',' read -ra DOMAIN_ARRAY <<< "$DOMAINS"
+
+
+for i in "${DOMAIN_ARRAY[@]}"; do
     echo "Checking the SSL certificates..."
-    for domain in "${domains[@]}"; do
+    echo
+
+    for domain in "${DOMAIN_ARRAY[@]}"; do
+        echo "Checking the SSL certificates for the domain: $domain"
         checkssl --domain $domain
     done
-    echo "Checking the SSL certificates is done"
+
+    echo
+    echo "...Checking the SSL certificates is done"
     echo "Sleeping for 1 day..."
+
     sleep 1m
 done
