@@ -40,7 +40,7 @@ docker run -d \
     -e GOTIFY_DOMAIN="your_gotify_domain" \
     -e REMAINDER_DAYS_TO_EXPIRE="7" \
     -e CHECKING_INTERVAL_IN_DAYS="7" \
-    schecher1/ssl-expiry-reminder
+    schecher/ssl-expiry-reminder
 ```
 
 - Run via `docker compose`
@@ -49,7 +49,7 @@ version: '3'
 services:
   sslchecker:
     container_name: ssl_checker_01
-    image: schecher1/ssl-expiry-reminder
+    image: schecher/ssl-expiry-reminder
     environment:
       - DOMAINS=domain1.com,domain2.com
       - TELGRAM_TOKEN=your_telegram_token
