@@ -8,7 +8,13 @@ WORKDIR /app
 COPY . .
 
 #install necessary packages
-RUN apt update -y && apt upgrade -y && apt install -y nodejs npm
+RUN apt update -y && apt install -y nodejs npm
+
+#install the node modules
+RUN npm install
+
+#link the node modules
+RUN npm link
 
 #set the entrypoint (endless bash script)
 ENTRYPOINT ["bash", "ENTRYPOINT.sh"]
