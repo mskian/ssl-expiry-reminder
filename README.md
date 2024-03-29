@@ -5,12 +5,15 @@
 SSL Expiry Reminder and SSL Status Checker - Get SSL Expiry Notification reminder on Telegram and Gotify.  
 
 ## Gotify  
+### Desktop
+![SSL Expiry Reminder Gotify](IMAGES/Gotify_Message_Desktop.png)  
 
-![SSL Expiry Reminder Gotify](https://raw.githubusercontent.com/mskian/ssl-expiry-reminder/master/Screenshot.png)  
+### Smartphone
+![SSL Expiry Reminder Gotify](IMAGES/Gotify_Message_Smartphone.jpg)  
 
 ## Telegram  
 
-![SSL Expiry Reminder Telegram](https://raw.githubusercontent.com/mskian/ssl-expiry-reminder/master/screenshot-telegram.png)  
+![SSL Expiry Reminder Telegram](IMAGES/Telegram_Message.jpg)  
 
 If you Like My Work then Buy a Coffee for me 😄  
 
@@ -23,7 +26,39 @@ If you Like My Work then Buy a Coffee for me 😄
 - Telegram Bot - <https://core.telegram.org/bots>
 - Gotify API - <https://gist.github.com/mcnaveen/2788985648490e7b3af24647247ed4e7#gistcomment-2996497>
 
-## 🔧 Installation
+## 🔧 Installation (docker) 🐳
+Tip: If you don't want to have Telegram, for example, simply delete the line or in the compose variant comment it out with '#'
+
+- Run via `docker run`
+```bash
+docker run -d \
+    --name ssl_checker_01 \
+    -e DOMAINS="domain1.com,domain2.com" \
+    -e TELGRAM_TOKEN="your_telegram_token" \
+    -e TELGRAM_CHAT_ID="your_telegram_chat_id" \
+    -e GOTIFY_TOKEN="your_gotify_token" \
+    -e GOTIFY_DOMAIN="your_gotify_domain" \
+    -e REMAINDER_DAYS_TO_EXPIRE="remainder_days_value" \
+    schecher1/ssl-expiry-reminder
+```
+
+- Run via `docker compose`
+```yaml
+version: '3'
+services:
+  sslchecker:
+    container_name: ssl_checker_01
+    image: schecher1/ssl-expiry-reminder
+    environment:
+      - DOMAINS=domain1.com,domain2.com
+      - TELGRAM_TOKEN=your_telegram_token
+      - TELGRAM_CHAT_ID=your_telegram_chat_id
+      - GOTIFY_TOKEN=your_gotify_token
+      - GOTIFY_DOMAIN=your_gotify_domain
+      - REMAINDER_DAYS_TO_EXPIRE=remainder_days_value
+```
+
+## 🔧 Installation (normally)
 
 - Clone this Repo via Git
 
