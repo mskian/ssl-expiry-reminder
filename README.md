@@ -81,7 +81,7 @@ docker run -d \
 ```
 
 - Run via `docker compose via source code`
-```yaml
+```bash
 git clone https://github.com/mskian/ssl-expiry-reminder.git
 
 cd ssl-expiry-reminder
