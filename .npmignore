@@ -24,3 +24,6 @@ renovate.json
 
 # Editors
 .vscode/*
+
+# The image folder 
+IMAGES/

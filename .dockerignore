@@ -15,3 +15,6 @@ Screenshot.png
 .eslintcache/
 .vscode/
 .npm/
+
+#the image folder 
+IMAGES/
