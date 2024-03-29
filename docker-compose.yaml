@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  sslchecker:
+    container_name: ssl_checker_01
+    build: .
+    environment:
+      - DOMAINS=domain1.com,domain2.com
+      - TELGRAM_TOKEN=your_telegram_token
+      - TELGRAM_CHAT_ID=your_telegram_chat_id
+      - GOTIFY_TOKEN=your_gotify_token
+      - GOTIFY_DOMAIN=your_gotify_domain
+      - REMAINDER_DAYS_TO_EXPIRE=7
+      - CHECKING_INTERVAL_IN_DAYS=7
