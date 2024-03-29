@@ -36,6 +36,13 @@ if [ -z "$REMAINDER_DAYS_TO_EXPIRE" ]; then
     exit 1
 fi
 
+#check if the 'CHECKING_INTERVAL_IN_DAYS' is provided
+if [ -z "$CHECKING_INTERVAL_IN_DAYS" ]; then
+    echo "Please provide the 'CHECKING_INTERVAL_IN_DAYS' environment variable"
+    echo "No 'CHECKING_INTERVAL_IN_DAYS' provided, EXIT..."
+    exit 1
+fi
+
 #configure the config file
 echo "Configuring the config file..."
 
@@ -47,7 +54,7 @@ fi
 #check if telegram token is provided
 if [ ! -z "$TELGRAM_TOKEN" ]; then
     checkssl --telegram https://api.telegram.org/bot$TELGRAM_TOKEN/sendMessage
-    checkssl --chatid 123456789
+    checkssl --chatid $TELGRAM_CHAT_ID
 fi
 
 checkssl --remainder $REMAINDER_DAYS_TO_EXPIRE
@@ -79,7 +86,7 @@ for i in "${DOMAIN_ARRAY[@]}"; do
 
     echo
     echo "...Checking the SSL certificates is done"
-    echo "Sleeping for 1 day..."
+    echo "Sleeping for ${CHECKING_INTERVAL_IN_DAYS} day(s)..."
 
-    sleep 1m
+    sleep "${CHECKING_INTERVAL_IN_DAYS}d"
 done
