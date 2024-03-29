@@ -38,7 +38,8 @@ docker run -d \
     -e TELGRAM_CHAT_ID="your_telegram_chat_id" \
     -e GOTIFY_TOKEN="your_gotify_token" \
     -e GOTIFY_DOMAIN="your_gotify_domain" \
-    -e REMAINDER_DAYS_TO_EXPIRE="remainder_days_value" \
+    -e REMAINDER_DAYS_TO_EXPIRE="7" \
+    -e CHECKING_INTERVAL_IN_DAYS="7" \
     schecher1/ssl-expiry-reminder
 ```
 
@@ -55,7 +56,8 @@ services:
       - TELGRAM_CHAT_ID=your_telegram_chat_id
       - GOTIFY_TOKEN=your_gotify_token
       - GOTIFY_DOMAIN=your_gotify_domain
-      - REMAINDER_DAYS_TO_EXPIRE=remainder_days_value
+      - REMAINDER_DAYS_TO_EXPIRE=7
+      - CHECKING_INTERVAL_IN_DAYS=7
 ```
 
 ## 🔧 Installation (normally)
