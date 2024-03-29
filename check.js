@@ -26,7 +26,10 @@ program.version(packageJSON.version)
     .option('-r, --remainder <Enter the Day Remaining 1 to 10>', 'Enter the Remaining Day to Get SSL Expiry Remainder Alert')
 program.parse(process.argv);
 
-function sendMessage(message) {
+function sendMessage(message, alert = false) {
+    //manipulate the message
+    message = 'SSL Expiry reminder ' + (alert ? '🚨' : '✅') + '\n\n' + message;
+
     var TELEGRAM_URL = config.get('telegramkey');
     var TELEGRAM_CHATID = config.get('telegramchatid');
     if (TELEGRAM_CHATID && TELEGRAM_URL) {
@@ -59,12 +62,12 @@ function sendMessage(message) {
     }
 }
 
-function gotifyMessage(hello) {
+function gotifyMessage(hello, alert = false) {
     var GOTIFY_API = config.get('key');
     if (GOTIFY_API) {
         var url = GOTIFY_API
         var bodyFormData = {
-            title: 'SSL Expiry reminder',
+            title:  'SSL Expiry reminder ' + (alert ? '🚨' : '✅'),
             message: hello,
             priority: 5
         };
@@ -119,15 +122,12 @@ if (options.gotify) {
         var enddate = new Date(certdata.validTo);
         var certstart = moment(startdate);
         var certend = moment(enddate);
-
-        sendMessage(lval + '\n' + 'Certificate Valid from \t' + emoji.get("raised_hand_with_fingers_splayed") + '\n' + certstart.format('LLLL') + '\n' + 'Certificate Expiry date \t' + emoji.get("point_down") + '\n' + certend.format('LLLL') + '\n' + 'Days Remaining \t' + emoji.get("clock8") + '\t' + certdata.daysRemaining);
-        gotifyMessage(lval + '\n' + 'Certificate Valid from \t' + emoji.get("raised_hand_with_fingers_splayed") + '\n' + certstart.format('LLLL') + '\n' + 'Certificate Expiry date \t' + emoji.get("point_down") + '\n' + certend.format('LLLL') + '\n' + 'Days Remaining \t' + emoji.get("clock8") + '\t' + certdata.daysRemaining);
-
         var SSL_REMAINDER = config.get('sslremainder');
-        if (certdata.daysRemaining == 5 || certdata.daysRemaining == SSL_REMAINDER) {
-            sendMessage('Status: Oops time to Renew SSL for \t' + lval + '\t' + emoji.get("rotating_light"));
-            gotifyMessage('Status: Oops time to Renew SSL \t' + lval + '\t' + emoji.get("rotating_light"));
-        }
+        let message = `Domain: \n${lval}\n\nCertificate Valid from: \n${certstart.format('LLLL')}\n\nCertificate Expiry date: \n${certend.format('LLLL')}\n\nDays Remaining: \n${certdata.daysRemaining}`;
+        let isAlert =  certdata.daysRemaining <= SSL_REMAINDER;
+
+        sendMessage(message, isAlert);
+        gotifyMessage(message, isAlert);
 
     }).catch((err) => {
         if (err.code === 'ENOTFOUND') {
