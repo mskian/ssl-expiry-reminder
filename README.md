@@ -1,4 +1,4 @@
-# SSL Expiry Reminder 🔔
+# SSL Expiry Reminder 🔔 Owner: mskian
 
 [![Github Workflow](https://github.com/mskian/ssl-expiry-reminder/workflows/ssl-expiry-reminder-test/badge.svg)](https://github.com/mskian/ssl-expiry-reminder/actions)  
 
@@ -193,8 +193,15 @@ Your PR's are Always welcome 🦄
 
 ## 🐛 Bug Report
 
-If you find any issues create an issue Ticket Here ✉ <https://github.com/mskian/ssl-expiry-reminder/issues>
+If you find any issues create an issue Ticket Here ✉   
+<https://github.com/mskian/ssl-expiry-reminder/issues>
 
-## ☑ License
+## ✅ License
 
-MIT
+- MIT
+
+## 📃 Changelog
+
+### v1.0.0.0
+- Docker support was added
+- Message has been edited (clearer)
