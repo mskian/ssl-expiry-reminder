@@ -1,0 +1,17 @@
+#useless files for the container
+.env
+.gitignore
+.npmignore
+test.js
+backup.js
+node_modules
+test
+README.md
+screenshot-telegram.png
+Screenshot.png
+
+#dot folder
+.github/
+.eslintcache/
+.vscode/
+.npm/
