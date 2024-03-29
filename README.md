@@ -60,6 +60,26 @@ services:
       - CHECKING_INTERVAL_IN_DAYS=7
 ```
 
+- Run via `source code`
+```bash
+git clone https://github.com/mskian/ssl-expiry-reminder.git
+
+cd ssl-expiry-reminder
+
+docker build -t sslreminder .
+
+docker run -d \
+    --name ssl_checker_01 \
+    -e DOMAINS="domain1.com,domain2.com" \
+    -e TELGRAM_TOKEN="your_telegram_token" \
+    -e TELGRAM_CHAT_ID="your_telegram_chat_id" \
+    -e GOTIFY_TOKEN="your_gotify_token" \
+    -e GOTIFY_DOMAIN="your_gotify_domain" \
+    -e REMAINDER_DAYS_TO_EXPIRE="7" \
+    -e CHECKING_INTERVAL_IN_DAYS="7" \
+    sslreminder
+```
+
 ## 🔧 Installation (normally)
 
 - Clone this Repo via Git
