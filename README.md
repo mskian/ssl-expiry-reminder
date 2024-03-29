@@ -233,6 +233,9 @@ If you find any issues create an issue Ticket Here ✉
 
 ## 📃 Changelog
 
+## v1.0.1.1
+- Bug Fix: No endless loop was added, the container would have stopped after the "second" search
+
 ### v1.0.1.0
 - Docker image size was optimized by 66,6% (370mb => 123mb)
 
