@@ -31,7 +31,7 @@
 	"dependencies": {
 		"axios": "^1.7.9",
 		"commander": "^12.1.0",
-		"conf": "^13.0.1",
+		"conf": "^13.1.0",
 		"moment": "^2.30.1",
 		"node-emoji": "2.2.0",
 		"ora": "^8.1.1",
